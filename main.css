@@ -1,29 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+.separator {
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 1rem;
+}
+
+nav {
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 1rem;
+}
+
 .about {
     display: flex;
-    align-items: center;
     margin-bottom: 2rem;
 }
 
 .logo-container {
-    flex: 0 0 auto;
-    margin-right: 2rem;
+    flex: 1;
+    margin-right: 1rem;
 }
 
 .logo-container img {
-    max-width: 200px;
+    max-width: 100%;
     height: auto;
 }
 
 .description {
+    flex: 2;
+}
+
+.projects {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.project-image {
     flex: 1;
+    margin-right: 1rem;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-description {
+    flex: 2;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
-    .about {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #f4f4f4;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .about, .projects {
         flex-direction: column;
     }
 
-    .logo-container {
+    .logo-container, .project-image {
         margin-right: 0;
         margin-bottom: 1rem;
     }
