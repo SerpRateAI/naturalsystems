@@ -1,1 +1,55 @@
-hello there!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NS Laboratories</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>NS Laboratories</h1>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#papers">Papers</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1</h3>
+                <p>Description of Project 1</p>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2</p>
+            </div>
+            <div class="project">
+                <h3>Project 3</h3>
+                <p>Description of Project 3</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:info@nslaboratories.com">info@nslaboratories.com</a></p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
