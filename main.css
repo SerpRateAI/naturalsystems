@@ -7,18 +7,25 @@
 body {
     font-family: 'Roboto Mono', monospace;
     line-height: 1.6;
-    padding: 20px;
+    color: #333;
 }
 
 header {
+    background-color: #f4f4f4;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+
+.separator {
+    height: 1px;
+    background: repeating-linear-gradient(to right, #333 0, #333 5px, transparent 5px, transparent 7px);
+    width: 100%;
 }
 
 nav {
@@ -43,7 +50,7 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 1rem;
 }
 
 .nav-links a {
@@ -51,20 +58,40 @@ nav {
     color: #333;
 }
 
-.projects {
-    margin-top: 40px;
+main {
+    padding: 2rem;
 }
 
 .project {
-    margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    flex: 1;
+    min-width: 200px;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-description {
+    flex: 2;
+    padding: 0 1rem;
+    min-width: 200px;
 }
 
 footer {
-    margin-top: 40px;
+    background-color: #f4f4f4;
     text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -75,17 +102,25 @@ footer {
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: #f8f8f8;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background-color: #f4f4f4;
+        width: 100%;
     }
 
-    .nav-links.active {
+    .nav-links.show {
         display: flex;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 0;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-description {
+        padding: 1rem 0;
     }
 }
